@@ -1,0 +1,26 @@
+<p>Nombre del empleado: {{ getNombre() }}!</p>
+<p>Apellido del empleado: {{ apellido }}</p>
+<p>Edad del empleado: {{ edad<18 ? 'Es menor de edad' : edad }}</p>
+<p>Empresa del empleado: {{empresa}}</p>
+
+    <!--<p>Empresa del empleado: {{ empresa.value }}</p>-->
+
+<!--Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="enableCubeBinding">-->
+
+<!--Introduce la empresa: <input type="text" (input)="cambiarEmpresa($event)"> --> <!--Hacemos lo mismo de que se mande lo que escribamos al tocar una tecla pero con eventBinding-->
+
+Introduce la empresa: <input type="text" [(ngModel)]="empresa"> <!--Hacemos Binding Bidireccional o Two way Binding-->
+
+<br/>
+<br/>
+{{textoDeRegistro}}
+<br/>
+<!--Registrado: <input type="checkbox" id="registro" [checked]="userRegistered" (click)="setUserRegistered()">-->
+<br/>
+Registrado: <input type="radio" value="si" name="nRegistro" [checked]="userRegistered" (click)="setUserRegistered($event)">
+<br/>
+No registrado: <input type="radio" value="no" name="nRegistro" (click)="setUserRegistered($event)">
+
+{{getRegistroUser()}}
+
+<!--<input type="button" value="Dale!" (click)="asignarEmpresa(empresa.value)">-->
